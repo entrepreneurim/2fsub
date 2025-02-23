@@ -78,7 +78,7 @@ async def start_command(client: Client, message: Message):
             except Exception:
                 continue
 
-        delete_msg = await message.reply_text("<b>This video will be deleted automatically in 5 minutes..\nSave it in your Saved Messages!</b>")
+        delete_msg = await message.reply_text("<b>𝖳𝗁𝗂𝗌 𝗏𝗂𝖽𝖾𝗈 𝗂𝗌 𝖽𝖾𝗅𝖾𝗍𝖾𝖽 𝖺𝗎𝗍𝗈𝗆𝖺𝗍𝗂𝖼𝖺𝗅𝗅𝗒 𝗂𝗇 5𝗆𝗂𝗇𝗎𝗍𝖾𝗌.. \n𝖥𝗈𝗋𝗐𝖺𝗋𝖽 𝗂𝗇 𝗒𝗈𝗎𝗋 𝖲𝖺𝗏𝖾𝖽 𝖬𝖾𝗌𝗌𝖺𝗀𝖾𝗌..!!</b>")
         await asyncio.sleep(SECONDS)
 
         for msg in sent_messages:
