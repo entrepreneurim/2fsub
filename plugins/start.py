@@ -89,11 +89,11 @@ async def start_command(client: Client, message: Message):
 
         try:
             await delete_msg.edit_text(
-                f"<b>The previous video was deleted. If you want the same video again, click on:</b>",
+                f"<b>›› Pʀᴇᴠɪᴏᴜs ᴠɪᴅᴇᴏ ᴡᴀs ᴅᴇʟᴇᴛᴇᴅ. Iғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ \nᴛʜᴇ sᴀᴍᴇ ᴠɪᴅᴇᴏ ᴀɢᴀɪɴ, ᴄʟɪᴄᴋ ɢᴇᴛ ᴠɪᴅᴇᴏ</b>",
                 reply_markup=InlineKeyboardMarkup(
                     [
-                        [InlineKeyboardButton("📥 Get Video", url=f"https://t.me/{client.username}?start={base64_string}"),
-                         InlineKeyboardButton("❌ Close", callback_data="close")]
+                        [InlineKeyboardButton("• ɢᴇᴛ ᴠɪᴅᴇᴏ", url=f"https://t.me/{client.username}?start={base64_string}"),
+                         InlineKeyboardButton("ᴄʟᴏsᴇ •", callback_data="close")]
                     ]
                 )
             )
@@ -103,9 +103,8 @@ async def start_command(client: Client, message: Message):
     else:
         reply_markup = InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton(text="• More •", url="https://t.me/zoroflix")],
-                [InlineKeyboardButton("About", callback_data="about"),
-                 InlineKeyboardButton("Close", callback_data="close")]
+                [InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="about"),
+                 InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close")]
             ]
         )
         await message.reply_text(
@@ -131,14 +130,14 @@ REPLY_ERROR = "<code>Use this command as a reply to any Telegram message.</code>
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
     buttons = [
-        [InlineKeyboardButton(text="Join Channel", url=client.invitelink),
-         InlineKeyboardButton(text="Join Channel", url=client.invitelink2)]
+        [InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink),
+         InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink2)]
     ]
 
     try:
         buttons.append(
             [InlineKeyboardButton(
-                text="Try Again",
+                text="ᴛʀʏ ᴀɢᴀɪɴ",
                 url=f"https://t.me/{client.username}?start={message.command[1]}"
             )]
         )
