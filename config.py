@@ -35,7 +35,7 @@ DB_NAME = os.environ.get("DATABASE_NAME", "Cluster0")
 FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1002004115638"))
 FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", "-1002337221005"))
 
-TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
+TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "50"))
 
 #start message
 START_MSG = os.environ.get("START_MESSAGE", "<b><blockquote>›› Hᴇʏ {first} ×</blockquote>     ɪ ᴀᴍ ᴀ ғɪʟᴇ sᴛᴏʀᴇ ʙᴏᴛ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴀɴɪᴍᴇxɢᴀʟʟᴇʀʏ ⚡.</b>")
